@@ -1,0 +1,20 @@
+.navbarBackground {
+  background-color: rgba(0 0 0 / 6%);
+}
+
+.navLogo {
+  font-family: "Oleo Script", cursive;
+  font-size: 2rem !important;
+}
+
+.links {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .linksRight {
+    position: absolute;
+    right: 0px;
+    margin-right: 10%;
+  }
+}

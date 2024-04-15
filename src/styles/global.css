@@ -1,0 +1,26 @@
+.root {
+  font-size: 62.5%;
+  --fa-style-family-brands: "Font Awesome 6 Brands";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.socialIco {
+  width: 50px;
+  margin: 40px 10px 20px 0px;
+  cursor: pointer;
+  z-index: -1;
+  filter: grayscale(100%);
+  transition: 0.3s ease-in-out;
+}
+
+.social-ico:hover,
+.social-ico:focus {
+  filter: grayscale(0);
+}

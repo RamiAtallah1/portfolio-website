@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Introduction from "./components/Introduction/Introduction";
+import Menu from "./components/Menu/Menu";
+import Skills from "./components/Skills/Skills";
+import About from "./components/About/About";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import { Slide, Zoom } from "react-awesome-reveal";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Menu />
+      <Introduction />
+      <Skills />
+      <Slide>
+        <About />
+      </Slide>
+      <Portfolio />
+      <Zoom>
+        <Contact />
+      </Zoom>
+      <Footer />
     </div>
   );
 }
-
-export default App;
