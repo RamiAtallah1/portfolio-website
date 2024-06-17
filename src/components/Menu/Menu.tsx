@@ -5,7 +5,7 @@ import styles from "./Menu.module.css";
 
 export default function Menu() {
   return (
-    <Navbar expand="lg" className={styles.navbarBackground}>
+    <Navbar expand="lg" variant="dark" className="bgColor">
       <Container>
         <Navbar.Brand href="#home" className={styles.navLogo}>
           Rami Atallah

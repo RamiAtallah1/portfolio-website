@@ -1,0 +1,16 @@
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: #22277a;
+  color: #fff;
+}
+
+.bgColor {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(29, 127, 253, 1) 50%,
+    rgba(69, 252, 244, 1) 100%
+  );
+}

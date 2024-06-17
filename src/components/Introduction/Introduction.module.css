@@ -5,6 +5,7 @@
   justify-content: center;
   position: relative;
   padding: 20px;
+  padding-top: 70px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -18,7 +19,7 @@
 
 @media only screen and (min-width: 901px) {
   .mainContainer {
-    height: 100dvh;
+    height: 65dvh;
   }
 }
 
@@ -30,7 +31,7 @@
 }
 
 .introTitle {
-  color: #2d2e32;
+  color: #fff;
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 2rem;
@@ -38,7 +39,7 @@
 }
 
 .mainIntro {
-  color: #555;
+  color: #f5f5f5;
   font-family: Mulish, sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
@@ -60,7 +61,7 @@
 
 .myImg {
   -webkit-animation: morph 8s ease-in-out infinite;
-  animation: morph 8s ease-in-out infinite;
+  animation: morph 6s ease-in-out infinite;
   background-image: url(/public/img/profile.png);
   background-position: 50%;
   background-repeat: no-repeat;
@@ -92,10 +93,10 @@
 }
 
 .cvButton {
-  --color-1: #333;
-  --color-2: #aaa;
+  --color-1: rgba(29, 127, 253, 1);
+  --color-2: rgba(69, 252, 244, 1);
   background: linear-gradient(170deg, var(--color-1), var(--color-2) 80%);
-  color: white;
+  color: #fff;
   text-decoration: none;
   text-align: center;
   padding: 15px;
@@ -106,8 +107,8 @@
 }
 
 .cvButton:hover {
-  --color-1: #312c2c;
-  --color-2: #cecece;
+  --color-1: rgba(29, 127, 253, 1);
+  --color-2: rgba(69, 252, 244, 1);
   background: linear-gradient(170deg, var(--color-2), var(--color-1) 80%);
 }
 

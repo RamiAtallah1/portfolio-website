@@ -10,21 +10,21 @@ export default function About() {
   };
 
   return (
-    <div id="about" className={`mb-4 ${styles.container}`}>
+    <div id="about" className={`mb-2 ${styles.container}`}>
       <div className={styles.aboutContent}>
         <div className={styles.imgSide}>
           <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
             <div onClick={flipImage}>
               <img
-                src="img/about-day.png"
-                alt="coding day"
+                src="img/about-night.png"
+                alt="coding night"
                 className={styles.mainImgSide}
               />
             </div>
             <div onClick={flipImage}>
               <img
-                src="img/about-night.png"
-                alt="coding night"
+                src="img/about-day.png"
+                alt="coding day"
                 className={styles.mainImgSide}
               />
             </div>

@@ -31,28 +31,31 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <div id="projects" className={`bg-light pt-4 mb-4 ${styles.container}`}>
-      <div className={styles.projectContent}>
-        <p className={styles.projectContentTitle}>Portfolio</p>
-        <h3 className={styles.projectContentSubTitle}>
-          Each project is a unique piece of development 🧩
-        </h3>
-        <div className={styles.projectsGrid}>
-          {projects.map((project, index) => (
-            <Bounce>
-              <Project
-                key={project.title}
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                stacks={project.stacks}
-                github={project.github}
-                reversed={index % 2 !== 0}
-              />
-            </Bounce>
-          ))}
+    <div className="bgColor">
+      <img src="img/wave3.svg" alt="wave 3" />
+      <div id="projects" className={`bgColor pt-4 mb-2 ${styles.container}`}>
+        <div className={styles.projectContent}>
+          <p className={styles.projectContentTitle}>Portfolio</p>
+          <h3 className={styles.projectContentSubTitle}>
+            Each project is a unique piece of development 🧩
+          </h3>
+          <div className={styles.projectsGrid}>
+            {projects.map((project, index) => (
+              <Bounce key={project.title}>
+                <Project
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                  stacks={project.stacks}
+                  github={project.github}
+                  reversed={index % 2 !== 0}
+                />
+              </Bounce>
+            ))}
+          </div>
         </div>
       </div>
+      <img src="img/wave2.svg" alt="wave 2" />
     </div>
   );
 }

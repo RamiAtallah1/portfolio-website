@@ -2,7 +2,7 @@ import styles from "./Contact.module.css";
 
 export default function Contact() {
   return (
-    <div id="contact" className={`mb-4 ${styles.container}`}>
+    <div id="contact" className={`mb-2 ${styles.container}`}>
       <div className={styles.contactContent}>
         <div className={styles.contactTitle}>
           <p>contact</p>
@@ -11,7 +11,7 @@ export default function Contact() {
         <div className={styles.contactIcons}>
           <div className={styles.contactIconBox}>
             <span>
-              <img width={45} src="img/map.png" alt="gmail icon" />
+              <img width={45} src="img/map.png" alt="map icon" />
             </span>
             <div className={styles.contactInfo}>
               <h3>Location</h3>
