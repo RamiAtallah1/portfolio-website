@@ -1,3 +1,4 @@
+import CvButton from "../CvButton/CvButton";
 import styles from "./Introduction.module.css";
 import { TypeAnimation } from "react-type-animation";
 
@@ -66,13 +67,14 @@ export default function Introduction() {
             </a>
           </span>
           <div className={`mt-3 ${styles.cvContainer}`}>
-            <a
+            {/* <a
               href="resume/Rami_Atallah_CV.pdf"
               target="_blank"
               className={styles.cvButton}
             >
               DOWNLOAD CV
-            </a>
+            </a> */}
+            <CvButton />
           </div>
         </div>
         <div className={styles.myImg}></div>
