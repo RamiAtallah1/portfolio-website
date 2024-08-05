@@ -41,7 +41,7 @@ export default function Portfolio() {
           </h3>
           <div className={styles.projectsGrid}>
             {projects.map((project, index) => (
-              <Bounce key={project.title}>
+              <Bounce key={project.title} triggerOnce>
                 <Project
                   image={project.image}
                   title={project.title}
