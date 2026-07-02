@@ -3,47 +3,65 @@
 import { useState, useEffect } from "react";
 
 interface UseActiveSectionOptions {
-  threshold?: number;
-  rootMargin?: string;
+  offsetRatio?: number;
   behavior?: "navbar" | "sidebar";
 }
 
 export function useActiveSection(
   sectionIds: string[],
-  options: UseActiveSectionOptions = {}
+  options: UseActiveSectionOptions = {},
 ) {
   const [activeSection, setActiveSection] = useState("");
 
-  const threshold =
-    options.threshold ?? (options.behavior === "navbar" ? 0 : 0.5);
-  const rootMargin =
-    options.rootMargin ??
-    (options.behavior === "navbar" ? "0px 0px -70% 0px" : "-10% 0px -10% 0px");
+  const offsetRatio =
+    options.offsetRatio ?? (options.behavior === "navbar" ? 0.3 : 0.4);
+
+  const idsKey = sectionIds.join(",");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= threshold) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold, rootMargin }
-    );
+    const ids = idsKey.split(",").filter(Boolean);
+    let ticking = false;
 
-    sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
-      element && observer.observe(element);
-    });
+    const update = () => {
+      ticking = false;
+      const activationLine = window.innerHeight * offsetRatio;
+
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+
+      let current = "";
+      if (atBottom) {
+        current = ids[ids.length - 1] ?? "";
+      } else {
+        for (const id of ids) {
+          const element = document.getElementById(id);
+          if (!element) continue;
+          if (element.getBoundingClientRect().top <= activationLine) {
+            current = id;
+          }
+        }
+      }
+
+      setActiveSection((prev) => (prev === current ? prev : current));
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
 
     return () => {
-      sectionIds.forEach((id) => {
-        const element = document.getElementById(id);
-        element && observer.unobserve(element);
-      });
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
     };
-  }, [sectionIds, threshold, rootMargin]);
+  }, [idsKey, offsetRatio]);
 
   return activeSection;
 }
