@@ -1,13 +1,13 @@
 "use client";
 
-import { IoBriefcaseOutline } from "react-icons/io5";
+import { IoSchoolOutline } from "react-icons/io5";
 import { Education } from "@/types/education";
 
 export default function EducationCard({ education }: { education: Education }) {
   return (
-    <div className="relative flex gap-4 pl-6">
-      <div className="absolute -left-[40px] flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full text-gray-300">
-        <IoBriefcaseOutline className="w-7 h-7" />
+    <div className="flex gap-4 md:relative md:pl-6">
+      <div className="flex-none flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full text-gray-300 md:absolute md:-left-[40px]">
+        <IoSchoolOutline className="w-7 h-7" />
       </div>
 
       <div>

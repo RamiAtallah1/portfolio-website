@@ -5,8 +5,8 @@ import { Work } from "@/types/work";
 
 export default function WorkExperienceCard({ work }: { work: Work }) {
   return (
-    <div className="relative flex gap-4 pl-6">
-      <div className="absolute -left-[40px] flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full text-gray-300">
+    <div className="flex gap-4 md:relative md:pl-6">
+      <div className="flex-none flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full text-gray-300 md:absolute md:-left-[40px]">
         <IoBriefcaseOutline className="w-7 h-7" />
       </div>
 

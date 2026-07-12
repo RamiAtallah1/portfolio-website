@@ -45,7 +45,7 @@ export default function ExperienceSection() {
       </div>
 
       {/* Right Content */}
-      <div className="w-3/4 pl-12">
+      <div className="w-full px-6 md:w-3/4 md:pl-12 md:pr-0">
         <WorkExperienceSection />
         <EducationSection />
         <SkillsSection />
