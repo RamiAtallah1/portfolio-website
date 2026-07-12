@@ -13,7 +13,9 @@ export default function About() {
         </div>
 
         <div className="flex flex-col justify-center">
-          <h2 className="text-blue-600 text-3xl font-bold mb-4">About Me</h2>
+          <h2 className="text-blue-600 text-3xl font-bold mb-4 text-center md:text-left">
+            About Me
+          </h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
             I’m a Full Stack Developer with 3+ years of experience building
             user-friendly, scalable web applications. My work blends clean code,

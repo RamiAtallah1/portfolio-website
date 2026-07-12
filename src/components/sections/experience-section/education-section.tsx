@@ -4,7 +4,9 @@ import EducationCard from "@/components/shared/education-card";
 export default function EducationSection() {
   return (
     <section id="education" className="pt-20">
-      <h2 className="text-blue-600 text-3xl font-bold mb-4">Education</h2>
+      <h2 className="text-blue-600 text-3xl font-bold mb-4 text-center md:text-left">
+        Education
+      </h2>
       {educations &&
         educations.map((education, index) => (
           <div className="mt-8" key={index}>

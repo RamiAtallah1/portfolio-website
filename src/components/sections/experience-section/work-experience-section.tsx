@@ -4,7 +4,9 @@ import WorkExperienceCard from "@/components/shared/work-experience-card";
 export default function WorkExperienceSection() {
   return (
     <section id="work-experience" className="pt-20">
-      <h2 className="text-blue-600 text-3xl font-bold mb-4">Work Experience</h2>
+      <h2 className="text-blue-600 text-3xl font-bold mb-4 text-center md:text-left">
+        Work Experience
+      </h2>
       {works &&
         works.map((work, index) => (
           <div className="mt-8" key={index}>
