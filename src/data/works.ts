@@ -6,10 +6,10 @@ export const works: Work[] = [
     company: "Jadded",
     duration: "Jan 2023 – Present",
     responsibilities: [
-      "Designed, developed, and deployed successful full stack applications using MERN stack.",
-      "Implemented a comprehensive control room for real time data monitoring and statistical analysis.",
-      "Developed alerting mechanisms to notify stakeholders of unexpected results, ensuring proactive response and problem resolution.",
-      "Crafting, testing, and maintaining RESTful APIs for seamless data communication",
+      "Architected and deployed production full-stack applications on Next.js, Node.js, and MongoDB serving real-user traffic in production.",
+      "Optimized RESTful APIs and database queries to reduce inter-service latency and measurably improve platform stability under load.",
+      "Built real-time features — live chat, live auctions, and instant notifications — using WebSockets, driving higher user engagement and session length.",
+      "Engineered an automated monitoring and alerting system that surfaces incidents proactively, shortening detection time and easing platform maintenance.",
     ],
   },
   {
@@ -17,10 +17,9 @@ export const works: Work[] = [
     company: "Webased",
     duration: "Aug 2022 – Oct 2022",
     responsibilities: [
-      "Developed a smart irrigation system using Python and MicroPython for efficient water management.",
-      "Collaborated on building a user-friendly dashboard with Ionic and React to monitor and control the irrigation system.",
-      "Implemented data synchronization with the server using Node.js (Express) to ensure real-time information retrieval.",
-      "Thoroughly documented the codebase to enhance maintainability and facilitate future development.",
+      "Designed an automated irrigation system in Python that triggers watering based on sensor thresholds, reducing manual intervention and water waste.",
+      "Built a cross-platform monitoring dashboard with Ionic, enabling real-time remote configuration and oversight of field hardware.",
+      "Developed a Node.js backend to ingest and persist high-frequency sensor data into MySQL, powering threshold-based automation logic.",
     ],
   },
 ];
