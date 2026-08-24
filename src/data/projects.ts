@@ -40,11 +40,11 @@ export const projects = [
     github: "https://github.com/RamiAtallah1/url-shortener",
   },
   {
-    icon: "/images/projects/wordle.svg",
-    title: "Wordle Clone",
+    icon: "/images/projects/basketball.svg",
+    title: "Lebanese Basketball",
     description:
-      "Daily word-guessing game where the player tries to guess a hidden word within a limited number of attempts.",
-    tech: ["React", "Tailwind"],
-    github: "https://github.com/RamiAtallah1/wordle-clone",
+      "Mobile app for following the Lebanese Basketball League — live scores, box scores, shot charts, and standings.",
+    tech: ["React Native", "Expo", "React Query", "Zustand"],
+    github: "https://github.com/RamiAtallah1/lebanese-basketball",
   },
 ];
